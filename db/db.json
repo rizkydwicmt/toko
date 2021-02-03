@@ -102,7 +102,47 @@
   "keranjangs": [
     {
       "jumlah_pemesanan": "1",
-      "products": {
+      "keterangan": "pesan",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 1
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "coba",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 2
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 3
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
         "id": 2,
         "kode": "K-02",
         "nama": "Nasi Goreng Telur",
@@ -110,7 +150,59 @@
         "is_ready": true,
         "gambar": "nasi-goreng-telor.jpg"
       },
-      "id": 1
+      "id": 4
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 5
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 6
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
+        "id": 3,
+        "kode": "K-03",
+        "nama": "Nasi Rames",
+        "harga": 12000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg"
+      },
+      "id": 7
+    },
+    {
+      "jumlah_pemesanan": "1",
+      "keterangan": "1",
+      "product": {
+        "id": 1,
+        "kode": "K-01",
+        "nama": "Sate Ayam",
+        "harga": 16000,
+        "is_ready": true,
+        "gambar": "sate-ayam.jpg"
+      },
+      "id": 8
     }
   ],
   "pesanans": [

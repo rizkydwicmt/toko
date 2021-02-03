@@ -2,8 +2,7 @@
   <div class="food-detail">
     <Navbar />
     <div class="container">
-
-      <!-- Breadcrumbs   -->
+      <!-- Breadcrumbs -->
       <div class="row mt-4">
         <div class="col">
           <nav aria-label="breadcrumb">
@@ -22,23 +21,30 @@
 
       <div class="row mt-4">
         <div class="col-md-6">
-          <img :src="'../assets/img/produk/'+product.gambar"  class="img-fluid shadow">
+          <img :src="'../assets/img/produk/'+product.gambar" class="img-fluid shadow" />
         </div>
         <div class="col-md-6">
-          <h2><strong>{{ product.nama }}</strong></h2>
-          <hr>
-          <h4>Harga: <strong>{{ product.harga }}</strong></h4>
+          <h2>
+            <strong>{{ product.nama }}</strong>
+          </h2>
+          <hr />
+          <h4>
+            Harga:
+            <strong>{{ product.harga }}</strong>
+          </h4>
           <form>
             <div class="form-group">
               <label for="jumlah_pemesanan">Jumlah Pesan</label>
-              <input type="number" class="form-control" />
+              <input type="number" class="form-control" v-model="pesan.jumlah_pemesanan" />
             </div>
             <div class="form-group">
               <label for="keterangan">Jumlah Pesan</label>
-              <textarea class="form-control" placeholder="Keterangan"></textarea>
+              <textarea class="form-control" placeholder="Keterangan" v-model="pesan.keterangan"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-success float-right"><b-icon-cart></b-icon-cart> Pesan</button>
+            <button type="submit" class="btn btn-success float-right" @click="pemesanan">
+              <b-icon-cart></b-icon-cart>Pesan
+            </button>
           </form>
         </div>
       </div>
@@ -55,22 +61,45 @@ export default {
   components: {
     Navbar,
   },
-  data(){
+  data() {
     return {
-      product: {}
-    }
+      product: {},
+      pesan: {},
+    };
   },
   methods: {
-    setProduct(data){
-      this.product = data
-    }
+    setProduct(data) {
+      this.product = data;
+    },
+    pemesanan() {
+      if (this.pesan.jumlah_pemesanan) {
+        this.pesan.product = this.product;
+        axios.post("http://127.0.0.1:3000/keranjangs/", this.pesan)
+        .then(() => {
+          this.$router.push({path: "/keranjang"});
+          this.$toast.success("Sukses masuk keranjang", {
+            type: "success",
+            position: "top-right",
+            duration: 3000,
+            dismissible: true,
+          });
+        });
+      } else {
+        this.$toast.error("Jumlah harus diisi", {
+          type: "error",
+          position: "top-right",
+          duration: 3000,
+          dismissible: true,
+        });
+      }
+    },
   },
   mounted() {
     axios
-      .get("http://127.0.0.1:3000/products/"+this.$route.params.id)
+      .get("http://127.0.0.1:3000/products/" + this.$route.params.id)
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log("Gagal : ", error));
-  }
+  },
 };
 </script>
 

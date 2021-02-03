@@ -5,13 +5,13 @@
       <Hero />
 
       <div class="row mt-4">
-        <div class="col">
+        <div class="col justify-content-center align-self-center">
           <h2>
             Best
             <strong>Foods</strong>
           </h2>
         </div>
-        <div class="col">
+        <div class="col justify-content-center align-self-center">
           <router-link to="/foods" class="btn btn-success float-right">
             <b-icon-eye></b-icon-eye> Lihat Semua
           </router-link>
