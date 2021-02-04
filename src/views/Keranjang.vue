@@ -76,6 +76,26 @@
           </div>
         </div>
       </div>
+
+      <!-- Form Checkout -->
+      <div class="row justify-content-end">
+        <div class="col-md-4">
+          <form>
+            <div class="form-group">
+              <label for="jumlah_pemesanan">Nama</label>
+              <input type="text" class="form-control" v-model="pesan.nama" />
+            </div>
+            <div class="form-group">
+              <label for="jumlah_pemesanan">Nomor Meja</label>
+              <input type="number" class="form-control" v-model="pesan.noMeja" />
+            </div>
+
+            <button type="submit" class="btn btn-success float-right" @click="checkout">
+              <b-icon-cart></b-icon-cart>Pesan
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -92,6 +112,7 @@ export default {
   data() {
     return {
       keranjangs: [],
+      pesan: {}
     };
   },
   methods: {
@@ -116,6 +137,36 @@ export default {
         })
         .catch((error) => console.log("Gagal : ", error));
     },
+    checkout(){
+      if(this.pesan.nama && this.pesan.noMeja){
+        this.pesan.keranjangs = this.keranjangs;
+        axios.post("http://127.0.0.1:3000/pesanans/", this.pesan)
+        .then(() => {
+
+          // Kosongkan keranjang
+          this.keranjangs.map(
+            (item) => axios
+            .delete("http://127.0.0.1:3000/keranjangs/" + item.id)
+            .catch((error) => console.log("Gagal : ", error))
+          )
+          
+          this.$router.push({path: "/pesanan-sukses"});
+          this.$toast.success("Pemesanan sukes", {
+            type: "success",
+            position: "top-right",
+            duration: 3000,
+            dismissible: true,
+          });
+        });
+      }else{
+        this.$toast.error("Nama dan nomer meja harus diisi!", {
+            type: "error",
+            position: "top-right",
+            duration: 3000,
+            dismissible: true,
+          });
+      }
+    }
   },
   mounted() {
     axios

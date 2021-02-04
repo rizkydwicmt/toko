@@ -99,56 +99,16 @@
       "gambar": "lontong-opor-ayam.jpg"
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah_pemesanan": "1",
-      "keterangan": "asd",
-      "product": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 1
-    },
-    {
-      "jumlah_pemesanan": "2",
-      "keterangan": "asd",
-      "product": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Goreng Telur",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-goreng-telor.jpg"
-      },
-      "id": 2
-    },
-    {
-      "jumlah_pemesanan": "3",
-      "keterangan": "asd",
-      "product": {
-        "id": 3,
-        "kode": "K-03",
-        "nama": "Nasi Rames",
-        "harga": 12000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 3
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
-      "nama": "Afif",
-      "noMeja": "3",
+      "nama": "Rizky",
+      "noMeja": "12",
       "keranjangs": [
         {
-          "jumlah_pemesanan": "1",
-          "keterangan": "Pedes",
-          "products": {
+          "jumlah_pemesanan": "2",
+          "keterangan": "123",
+          "product": {
             "id": 1,
             "kode": "K-01",
             "nama": "Sate Ayam",
@@ -159,8 +119,9 @@
           "id": 1
         },
         {
-          "jumlah_pemesanan": "1",
-          "products": {
+          "jumlah_pemesanan": "2",
+          "keterangan": "123",
+          "product": {
             "id": 2,
             "kode": "K-02",
             "nama": "Nasi Goreng Telur",
@@ -172,6 +133,59 @@
         }
       ],
       "id": 1
+    },
+    {
+      "nama": "Rizky",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "pakai sendok",
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "Pakai Sendok",
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nama": "12",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "asd",
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }

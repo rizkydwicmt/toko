@@ -38,8 +38,8 @@
               <input type="number" class="form-control" v-model="pesan.jumlah_pemesanan" />
             </div>
             <div class="form-group">
-              <label for="keterangan">Jumlah Pesan</label>
-              <textarea class="form-control" placeholder="Keterangan" v-model="pesan.keterangan"></textarea>
+              <label for="keterangan">Keterangan</label>
+              <textarea class="form-control" placeholder="Keterangan..." v-model="pesan.keterangan"></textarea>
             </div>
 
             <button type="submit" class="btn btn-success float-right" @click="pemesanan">
