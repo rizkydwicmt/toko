@@ -26,9 +26,9 @@
 
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">
+              <router-link class="nav-link" to="/keranjang">
               <b-icon-cart></b-icon-cart>
-              <span class="badge badge-success ml-2">{{ jumlah_pesanan.length }}</span>
+              <span class="badge badge-success ml-2">{{ updateKeranjang? updateKeranjang.length : jumlah_pesanan.length }}</span>
               </router-link>
             </li>
           </ul>
@@ -48,6 +48,7 @@ export default {
       jumlah_pesanan: []
     }
   },
+  props: ['updateKeranjang'],
   methods: {
     setJumlah(data) {
       this.jumlah_pesanan = data;
