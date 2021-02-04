@@ -186,6 +186,39 @@
         }
       ],
       "id": 3
+    },
+    {
+      "nama": "Rizky",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "asd",
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "3",
+          "keterangan": "asd",
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 4
     }
   ]
 }

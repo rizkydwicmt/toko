@@ -44,7 +44,7 @@
                   <th>{{index+1}}</th>
                   <td>
                     <img
-                      :src="'../assets/img/produk/'+keranjang.product.gambar"
+                      :src="require(`../assets/img/produk/${keranjang.product.gambar}`)"
                       class="img-fluid shadow"
                     />
                   </td>

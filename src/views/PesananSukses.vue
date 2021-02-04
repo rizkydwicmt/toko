@@ -4,6 +4,7 @@
     <div class="container">
       <div class="row justify-content-center mt-4">
         <div class="col text-center">
+           <img src="../assets/img/menunggu.png" width="100%" />
           <h2><strong>Sukses !!</strong></h2>
           <h4>Pesanan anda berhasil diproses <br> selamat menunggu</h4>
         </div>

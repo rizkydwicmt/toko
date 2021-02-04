@@ -21,7 +21,7 @@
 
       <div class="row mt-4">
         <div class="col-md-6">
-          <img :src="'../assets/img/produk/'+product.gambar" class="img-fluid shadow" />
+          <img :src="require(`../assets/img/produk/${product.gambar}`)" class="img-fluid shadow" />
         </div>
         <div class="col-md-6">
           <h2>
@@ -30,7 +30,7 @@
           <hr />
           <h4>
             Harga:
-            <strong>{{ product.harga }}</strong>
+            <strong>Rp. {{ product.harga }}</strong>
           </h4>
           <form>
             <div class="form-group">

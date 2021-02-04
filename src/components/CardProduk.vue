@@ -1,6 +1,7 @@
 <template>
   <div class="card shadow card-product">
-    <img :src="'../assets/img/produk/'+product.gambar" class="card-img-top" />
+    <!-- <img :src="'../assets/img/produk/'+product.gambar" class="card-img-top" /> -->
+    <img :src="require(`../assets/img/produk/${product.gambar}`)" class="card-img-top" />
     <div class="card-body">
       <h5 class="card-title">{{product.nama}}</h5>
       <p
